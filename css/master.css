@@ -63,7 +63,7 @@ body {
 
 .container {
     border-radius: 15px;
-    width: 330px;
+    width: 340px;
     min-height: 350px;
     overflow: hidden;
 
@@ -124,18 +124,23 @@ body {
 
 }
 
+:root {
+    --backimgsize: 150vw;
+}
+
 .background-top {
-    width: 140vw;
+    width: var(--backimgsize);
     position: absolute;
-    left: -80vw;
+    left: -105vw;
     top: -70vw;
     z-index: -100;
 }
 
+
 .background-bottom {
-    width: 130vw;
+    width: var(--backimgsize);
     position: absolute;
-    right: -80vw;
+    right: -100vw;
     bottom: -70vw;
     z-index: -90;
 }
@@ -151,7 +156,7 @@ body {
 
 
 .cont-stat {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-around;
 
@@ -160,23 +165,51 @@ body {
 }
 
 
-h2{
-    margin-top: -29px;
+.name {
+    margin-top: -35px;
     font-weight: 600;
-    
+    margin-bottom: 5px;
+
 }
 
-h2 span {
+.name span {
     all: unset;
-    font-weight: 300;
+    font-size: inherit;
+
+    opacity: 0.8;
+
+    font-weight: 400;
     font-size: smaller;
+    margin-left: 5px;
+
     display: inline;
 }
 
-h3 +p{
-    font-size: small;
-    font-weight: 300;
+.name+p,
+.stat+p {
+    font-weight: 400;
+    opacity: 0.8;
+    font-size: smaller;
+    margin-bottom: 5px;
+}
 
+
+.name,
+.stat {
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
+
+.stat {
+    margin-bottom: 3px;
+}
+
+.stat+p {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 
