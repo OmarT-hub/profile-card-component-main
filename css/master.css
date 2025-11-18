@@ -22,6 +22,10 @@ I Learn Here:
 
 
     --image-size: 100px;
+
+    --backimgsize: 150vw;
+
+
 }
 
 body {
@@ -63,7 +67,7 @@ body {
 
 .container {
     border-radius: 15px;
-    width: 340px;
+    width: 330px;
     min-height: 350px;
     overflow: hidden;
 
@@ -71,6 +75,7 @@ body {
 
 
     /* border: 2px solid black; */
+    box-shadow: 0 10px 30px 1px rgba(0, 0, 0, 0.434);
 
 }
 
@@ -124,13 +129,9 @@ body {
 
 }
 
-:root {
-    --backimgsize: 150vw;
-}
-
 .background-top {
     width: var(--backimgsize);
-    position: absolute;
+    position: fixed;
     left: -105vw;
     top: -70vw;
     z-index: -100;
@@ -215,4 +216,23 @@ body {
 
 
 
-@media (min-width:769px) {}
+@media (min-width:769px) {
+    .background-top {
+        width: 60vw;
+        transform: translateY(-45%) translateX(-25%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -100;
+    }
+
+
+    .background-bottom {
+        width: 60vw;
+        transform: translateY(60%) translateX(20%);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -90;
+    }
+}
